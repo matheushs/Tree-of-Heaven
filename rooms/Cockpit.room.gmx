@@ -53,9 +53,10 @@
   <instances>
     <instance objName="obj_Cockpit" x="0" y="0" name="inst_1ACDADEF" locked="0" code="" scaleX="0.666666686534882" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="140" y="111" name="inst_C4F1751F" locked="0" code="name = &quot;computer&quot;" scaleX="5.96999979019165" scaleY="8.35483837127686" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Warp" x="998" y="110" name="inst_AEB5FBE1" locked="0" code="target_map = CapQuarter;&#xA;" scaleX="8.02999973297119" scaleY="16.4838714599609" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="760" y="240" name="inst_4ADAFAAB" locked="0" code="name = &quot;DoorToHall&quot;&#xA;" scaleX="2.46875" scaleY="8.27999973297119" colour="4294967295" rotation="0"/>
     <instance objName="obj_CockpitHatch" x="14" y="492" name="inst_29AD465B" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="1009" y="126" name="inst_3183711A" locked="0" code="name = &quot;door_to_quarter&quot;&#xA;" scaleX="7" scaleY="15.8800001144409" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="357" y="185" name="inst_E5907BC9" locked="0" code="name = &quot;hole&quot;&#xA;" scaleX="2.54999995231628" scaleY="3.16000008583069" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

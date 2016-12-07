@@ -26,9 +26,8 @@ if(global.item_on_hand != 0){
             remove_from_inventory(global.item_on_hand);
             steve_says("Great, now I can at least reach it.")
             steve_says("It is still tightly screwed together, though.")
-            with(obj_stool){
-                visible = true;
-            }
+            
+            instance_create(624, 487, obj_hall_stool)
         }else{
             default_inventory_error();
         }
@@ -38,18 +37,20 @@ if(global.item_on_hand != 0){
             if(get_switch("opened_medbay_door")){
                 steve_says("I've already opened this door.");
             }else{
-                steve_says("[INSERT DECODING GAME HERE]");
-                show_debug_message("src_hall needs a decoding game")
-                set_switch("opened_medbay_door", true)
+                //steve_says("[INSERT DECODING GAME HERE]");
+                //show_debug_message("src_hall needs a decoding game")
+                //set_switch("opened_medbay_door", true)
+                start_decogame(room, "opened_medbay_door");
             }
             global.item_on_hand = 0;
         }else if(argument0 == "door_to_laboratory"){
             if(get_switch("opened_lab_door")){
                 steve_says("I've already opened this door.");
             }else{
-                steve_says("[INSERT DECODING GAME HERE]");
-                show_debug_message("src_hall needs a decoding game")
-                set_switch("opened_lab_door", true)
+                //steve_says("[INSERT DECODING GAME HERE]");
+                //show_debug_message("src_hall needs a decoding game")
+                //set_switch("opened_lab_door", true)
+                start_decogame(room, "opened_lab_door");
             }
             global.item_on_hand = 0;
         }else{
@@ -151,6 +152,9 @@ switch(argument0){
             steve_says("I can't reach it, it's too high.")
         }
         break;
+    case "stool":
+        steve_says("A simple kitchen stool.")
+        break
     default:
     break
 }

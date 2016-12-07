@@ -6,9 +6,11 @@ if(global.item_on_hand != 0){
             if(get_switch("decoded_crew_quarter_log")){
                 steve_says("I've already decoded this log.");
             }else{
-                steve_says("[INSERT DECODING GAME HERE]");
-                show_debug_message("src_CrewQuarter needs a decoding game")
-                set_switch("decoded_crew_quarter_log", true)
+                //steve_says("[INSERT DECODING GAME HERE]");
+                //show_debug_message("src_CrewQuarter needs a decoding game")
+                //set_switch("decoded_crew_quarter_log", true)
+                
+                start_decogame(room, "decoded_crew_quarter_log");
             }
             global.item_on_hand = 0;
         }else{
@@ -29,7 +31,7 @@ switch(argument0){
             log_says("I think I am going to die.")
             log_says("Heh. I did manage to figure it out. I told them I would. Sure, Thomas helped in the beginning, but...")
             log_says("For anyone listening who wants to know, the secret was in the plants. Incredible things, they are. They not only managed to absorb the radiation harmlessly, but trap it and use it to create... not an antidote, but close enough.")
-            log_says("I cut them, boiled them, and put it through the centrifuge, and from that i obtained something that could be diluted in alcohol." )
+            log_says("I cut them, boiled them, and put it through the centrifuge with some alcohol." )
             log_says("I mixed the alcohol solution with the doctor's serum and it was done.")
             log_says("A simple oral administration and a few hours should be enough.")
             log_says("Shame I took too long to see it. Maybe I wouldn't die, otherwise.")
@@ -59,6 +61,9 @@ switch(argument0){
         break;
     case "air_vent":
         steve_says("I came in through there, but now I can unlock the door and leave normally.")
+        break;
+    case "door":
+        event_teleport(Hall)
         break;
     default:
     break

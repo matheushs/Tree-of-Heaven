@@ -22,20 +22,17 @@ if(global.item_on_hand != 0){
 switch(argument0){
     case "computer":
         if(get_switch("is_in_good_end_route")){
-            scr_start_medium_end();
+            //scr_start_medium_end();
         
-            /*
             options[0,0] = "Stay with Dan."
             options[0,1] = scr_start_medium_end;
-            options[0,0] = "Don't choose yet."
-            options[0,1] = scr_do_nothing;
+            options[1,0] = "Don't choose yet."
+            options[1,1] = scr_do_nothing;
             
-            scr_showOptions(options, 2);*/
+            scr_showOptions(options, 2);
         }else if(get_switch("bad_route_opened_door")){
             steve_says("I am done here.")
         }else if(get_switch("bad_route_tried_door")){
-            set_switch("bad_route_opened_door", true)
-            
             options[0,0] = "Start Emergency Drill"
             options[0,1] = scr_start_emergency_drill_bad_end;
             scr_showOptions(options, 1);
@@ -72,7 +69,7 @@ switch(argument0){
         }else if(get_switch("woke_up_ai")){
             steve_says("Not much I can do here right now.");
             steve_says("Check on the ship's status, start emergency drills, see if the engines are running smoothly.");
-            steve_says("Nothing that will be much use right now.");
+            steve_says("Nothing that will be of much use right now.");
         }else if(!get_switch("woke_up_ai")){
             ai_says("... Initializing ...")
             ai_says("...")
@@ -106,7 +103,8 @@ switch(argument0){
             ai_says("Or I am perfectly fine.")
             steve_says("A 'I am fine' would have been enough.")
             ai_says("I am sorry, Steve, but there is always the possibility that-")
-            steve_says("No one broke your quantum encryption. You are fine.")     
+            steve_says("No one broke your quantum encryption. You are fine.") 
+            set_switch("woke_up_ai", true);    
             event_callScript(scr_createOptionsForIntro);
         }
         
@@ -142,6 +140,12 @@ switch(argument0){
             steve_says("Locked. And no way to force it open.")
             steve_says("Maybe if I found a blowtorch, or something to melt it away, I could get through.")
         }
+        break;
+    case "door_to_quarter":
+        event_teleport(CapQuarter);
+    case "hole":
+        steve_says("There is a hole in the hull. Fortunately, the defense systems are generating a forcefield around it.")
+        steve_says("It is the only reason I haven't been spaced the moment I entered here.")
         break;
     default:
     break

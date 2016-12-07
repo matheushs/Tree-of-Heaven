@@ -61,7 +61,7 @@
   </views>
   <instances>
     <instance objName="obj_EngineRoom" x="0" y="0" name="inst_2BCD790D" locked="0" code="" scaleX="0.666666686534882" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
-    <instance objName="obj_green_mist" x="3" y="3" name="inst_0E86CFF2" locked="0" code="" scaleX="0.666999995708466" scaleY="0.666999995708466" colour="16777215" rotation="0"/>
+    <instance objName="obj_green_mist" x="3" y="3" name="inst_0E86CFF2" locked="0" code="" scaleX="0.666999995708466" scaleY="0.666999995708466" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="1004" y="164" name="inst_C52B8BAB" locked="0" code="name = &quot;ladder&quot;&#xA;" scaleX="3.52999997138977" scaleY="5.22580623626709" colour="4294967295" rotation="0"/>
     <instance objName="obj_blinking_light" x="768" y="367" name="inst_F5AA4AB1" locked="0" code="" scaleX="0.529999971389771" scaleY="0.529999971389771" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="704" y="411" name="inst_A452670C" locked="0" code="name = &quot;body&quot;" scaleX="1.97000002861023" scaleY="1.22580647468567" colour="4294967295" rotation="0"/>

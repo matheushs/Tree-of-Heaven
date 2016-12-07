@@ -41,6 +41,7 @@ if(get_switch("decoded_medbay_log")) num_logs_seen++;
 if(num_logs_seen <= 1){
     set_switch("is_in_bad_end_route", true)
     
+    event_wait(2)
     steve_says("He...")
     steve_says("Hehe.")
     steve_says("Are you insane?")
@@ -57,6 +58,7 @@ if(num_logs_seen <= 1){
 }else{
     set_switch("is_in_good_end_route", true);
     
+    event_wait(2)
     steve_says("...")
     ai_says("Steve?")
     steve_says("I... I don't know. I...")

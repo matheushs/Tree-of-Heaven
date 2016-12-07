@@ -6,4 +6,5 @@ ai_says("Charging thrusters...")
 ai_says("Plotting new course of collision...")
 ai_says("We're ready to depart, captain.")
 steve_says("Let's go, Dan. Let's go.")
-event_teleport(MediumEnd)
+
+event_callScript(scr_do_teleport_midend)

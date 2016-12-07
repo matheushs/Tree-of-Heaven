@@ -5,9 +5,11 @@ if(global.item_on_hand != 0){
             if(get_switch("decoded_medbay_log")){
                 steve_says("I've already decoded this log.");
             }else{
-                steve_says("[INSERT DECODING GAME HERE]");
-                show_debug_message("src_MedBay needs a decoding game")
-                set_switch("decoded_medbay_log", true)
+                //steve_says("[INSERT DECODING GAME HERE]");
+                //show_debug_message("src_MedBay needs a decoding game")
+                //set_switch("decoded_medbay_log", true)
+                
+                start_decogame(room, "decoded_medbay_log");
             }
             global.item_on_hand = 0;
         }else{
@@ -38,6 +40,8 @@ switch(argument0){
         break;
     case "body":
         steve_says("Dead. But it looks like he put up a fight.")
+        steve_says("The killer must have left him barely alive, so he crawled into here.")
+        steve_says("He must have been pretty bad if not even the healing pod managed to save him.")
         break;
     case "spacesuit":
         steve_says("Empty. There is a tear in the left arm, so it won't be very useful like this.")
@@ -49,9 +53,9 @@ switch(argument0){
         set_switch("got_spacesuit", true);
         break;
     case "recipe":
-        steve_says("There is a recipe for a very strong acid in these notes.")
-        steve_says("There should be a puzzle here where you'd have to find out what combination of things to put in the centrifuge.")
-        steve_says("I didn't have the time to make it, so the answer is Soda, Sanitizer and Antifotorer.")
+        steve_says("This is a mess... Hey, this might be useful")
+        steve_says("Acid, simple recipe: a rectangle, three tall, five wide.#With the new analyzer interface, everyone should be able to make something like that.")
+        //steve_says("I didn't have the time to make it, so the answer is Soda, Sanitizer and Antifotorer.")
 
         break;
     case "antifotorer":

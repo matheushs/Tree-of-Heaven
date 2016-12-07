@@ -7,6 +7,10 @@
   <sounds name="sound">
     <sound>sound\snd_click</sound>
     <sound>sound\snd_common_text</sound>
+    <sound>sound\snd_alarm</sound>
+    <sound>sound\snd_bgm1</sound>
+    <sound>sound\snd_creepy</sound>
+    <sound>sound\snd_title</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="System">
@@ -34,11 +38,13 @@
       <sprites name="Hall_Stuff">
         <sprite>sprites\spr_HallHatchClosed</sprite>
         <sprite>sprites\spr_HallHatchOpen</sprite>
+        <sprite>sprites\spr_HallStool</sprite>
       </sprites>
       <sprites name="Lab_Stuff">
         <sprite>sprites\spr_silver_tape</sprite>
         <sprite>sprites\spr_beaker</sprite>
         <sprite>sprites\spr_lab_log</sprite>
+        <sprite>sprites\spr_lab_sanitizer</sprite>
       </sprites>
       <sprites name="MedBay_Stuff">
         <sprite>sprites\spr_spacesuit</sprite>
@@ -54,6 +60,12 @@
         <sprite>sprites\spr_green_mist</sprite>
         <sprite>sprites\spr_blinking_light</sprite>
       </sprites>
+      <sprites name="Kitchen_Stuff">
+        <sprite>sprites\spr_knife</sprite>
+        <sprite>sprites\spr_stool</sprite>
+        <sprite>sprites\spr_vodka</sprite>
+      </sprites>
+      <sprite>sprites\spr_Credits</sprite>
     </sprites>
     <sprites name="Itens">
       <sprite>sprites\spr_item_knife</sprite>
@@ -66,6 +78,7 @@
       <sprite>sprites\spr_item_silver_tape</sprite>
       <sprite>sprites\spr_item_beaker</sprite>
       <sprite>sprites\spr_beaker_with_plants</sprite>
+      <sprite>sprites\spr_beaker_with_plants_boiled</sprite>
       <sprite>sprites\spr_item_plant</sprite>
       <sprite>sprites\spr_item_shredded_plant</sprite>
       <sprite>sprites\spr_item_spacesuit_with_tear</sprite>
@@ -74,7 +87,40 @@
       <sprite>sprites\spr_item_acid</sprite>
       <sprite>sprites\spr_mix_a</sprite>
       <sprite>sprites\spr_mix_b</sprite>
+      <sprite>sprites\spr_cure_fake</sprite>
+      <sprite>sprites\spr_cure</sprite>
     </sprites>
+    <sprites name="Buttons">
+      <sprite>sprites\spr_save_btn</sprite>
+      <sprite>sprites\spr_load_btn</sprite>
+      <sprite>sprites\spr_exit_btn</sprite>
+    </sprites>
+    <sprites name="Borders">
+      <sprite>sprites\spr_border_ul</sprite>
+      <sprite>sprites\spr_border_ur</sprite>
+      <sprite>sprites\spr_border_um</sprite>
+      <sprite>sprites\spr_border_dl</sprite>
+      <sprite>sprites\spr_border_dr</sprite>
+      <sprite>sprites\spr_border_dm</sprite>
+      <sprite>sprites\spr_border_l</sprite>
+      <sprite>sprites\spr_border_r</sprite>
+    </sprites>
+    <sprites name="Menu_Descriptors">
+      <sprite>sprites\spr_desc_soda</sprite>
+      <sprite>sprites\spr_desc_antifotorer</sprite>
+      <sprite>sprites\spr_desc_plant</sprite>
+      <sprite>sprites\spr_desc_sanitizer</sprite>
+      <sprite>sprites\spr_desc_syroup</sprite>
+      <sprite>sprites\spr_desc_vodka</sprite>
+    </sprites>
+    <sprites name="MainMenu_Stuff">
+      <sprite>sprites\spr_mm_new</sprite>
+      <sprite>sprites\spr_mm_load</sprite>
+      <sprite>sprites\spr_mm_exit</sprite>
+    </sprites>
+    <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\srp_decografter_overlay</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -106,9 +152,11 @@
       <script>scripts\steve_says.gml</script>
       <script>scripts\log_says.gml</script>
       <script>scripts\ai_says.gml</script>
+      <script>scripts\narrator_says.gml</script>
     </scripts>
     <scripts name="Save And Load">
       <script>scripts\save_game.gml</script>
+      <script>scripts\save_game_ext.gml</script>
       <script>scripts\load_game.gml</script>
     </scripts>
     <scripts name="Teleporting">
@@ -126,6 +174,9 @@
       <script>scripts\scr_Laboratory.gml</script>
       <script>scripts\scr_MedBay.gml</script>
       <script>scripts\scr_EngineRoom.gml</script>
+      <script>scripts\scr_GameMenu.gml</script>
+      <script>scripts\scr_MainMenu.gml</script>
+      <script>scripts\scr_DecografterRoom.gml</script>
     </scripts>
     <script>scripts\add_to_inventory.gml</script>
     <script>scripts\remove_from_inventory.gml</script>
@@ -144,6 +195,16 @@
       <script>scripts\scr_start_survival_ending.gml</script>
       <script>scripts\scr_game_end.gml</script>
       <script>scripts\scr_do_teleport_badend.gml</script>
+      <script>scripts\scr_do_teleport_midend.gml</script>
+    </scripts>
+    <scripts name="Decografter Game">
+      <script>scripts\start_decogame.gml</script>
+      <script>scripts\checkPosition.gml</script>
+      <script>scripts\createBlock.gml</script>
+      <script>scripts\createLevel.gml</script>
+      <script>scripts\isSolvable.gml</script>
+      <script>scripts\moveObject.gml</script>
+      <script>scripts\setPosition.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -200,15 +261,22 @@
       <object>objects\obj_item_plants</object>
       <object>objects\obj_item_shredded_plants</object>
       <object>objects\obj_item_beaker_with_plants</object>
+      <object>objects\obj_item_beaker_with_plants_boiled</object>
       <object>objects\obj_item_spacesuit_with_tear</object>
       <object>objects\obj_item_spacesuit_fixed</object>
       <object>objects\obj_item_antifotorer</object>
       <object>objects\obj_item_acid</object>
+      <object>objects\obj_item_mixture_a</object>
+      <object>objects\obj_item_mixture_b</object>
+      <object>objects\obj_item_mixture_b_fake</object>
+      <object>objects\obj_item_cure_fake</object>
+      <object>objects\obj_item_cure</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_knife</object>
       <object>objects\obj_vodka</object>
       <object>objects\obj_stool</object>
+      <object>objects\obj_hall_stool</object>
       <object>objects\obj_HallHatch</object>
       <object>objects\obj_CockpitHatch</object>
       <object>objects\obj_silver_tape</object>
@@ -222,10 +290,56 @@
       <object>objects\obj_blinking_light</object>
       <object>objects\obj_green_mist</object>
     </objects>
+    <objects name="Buttons">
+      <object>objects\obj_btn_save</object>
+      <object>objects\obj_btn_load</object>
+      <object>objects\obj_btn_exit</object>
+    </objects>
+    <objects name="Border">
+      <object>objects\obj_border_ul</object>
+      <object>objects\obj_border_ur</object>
+      <object>objects\obj_border_um</object>
+      <object>objects\obj_border_dl</object>
+      <object>objects\obj_border_dr</object>
+      <object>objects\obj_border_dm</object>
+      <object>objects\obj_border_l</object>
+      <object>objects\obj_border_r</object>
+    </objects>
+    <objects name="Menu_Descriptors">
+      <object>objects\obj_desc_soda</object>
+      <object>objects\obj_desc_antifotorer</object>
+      <object>objects\obj_desc_plant</object>
+      <object>objects\obj_desc_sanitizer</object>
+      <object>objects\obj_desc_syroup</object>
+      <object>objects\obj_desc_vodka</object>
+    </objects>
+    <objects name="Menu_Descriptor_Itens">
+      <object>objects\obj_descItem_soda</object>
+      <object>objects\obj_descItem_plant</object>
+      <object>objects\obj_descItem_antifotorer</object>
+      <object>objects\obj_descItem_sanitizer</object>
+      <object>objects\obj_descItem_syroup</object>
+      <object>objects\obj_descItem_vodka</object>
+    </objects>
+    <objects name="MainMenu">
+      <object>objects\obj_btn_mm_new</object>
+      <object>objects\obj_btn_mm_load</object>
+      <object>objects\obj_btn_mm_exit</object>
+    </objects>
+    <objects name="Decografter Game">
+      <object>objects\obj_dec_exit</object>
+      <object>objects\obj_block</object>
+      <object>objects\obj_gameManager</object>
+      <object>objects\obj_decografter_overlay</object>
+    </objects>
+    <object>objects\obj_Credits</object>
+    <object>objects\obj_logo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_TitleScreen</room>
     <room>rooms\CopiableRoom</room>
+    <room>rooms\GameMenu</room>
+    <room>rooms\MainMenu</room>
     <rooms name="Ship's Rooms">
       <room>rooms\CapQuarter</room>
       <room>rooms\Cockpit</room>
@@ -240,6 +354,11 @@
       <room>rooms\BadEnd</room>
       <room>rooms\MediumEnd</room>
       <room>rooms\SurvivalEnd</room>
+      <room>rooms\CreditsRoom</room>
+    </rooms>
+    <rooms name="Decografter Room">
+      <room>rooms\DecografterRooma</room>
+      <room>rooms\DecografterRoom</room>
     </rooms>
   </rooms>
   <help>

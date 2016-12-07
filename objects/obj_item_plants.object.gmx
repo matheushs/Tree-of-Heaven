@@ -59,6 +59,10 @@ switch(item){
         add_to_inventory(instance_create(0, 0, obj_item_shredded_plants));
         steve_says("There, all cut up and ready to process.")
         break;
+    case "item_beaker":
+        steve_says("I can't just put it in there like this.")
+        steve_says("The plants are too big, it would be better to make them smaller, first.")
+        break;
     default: default_inventory_error()
 }
 </string>

@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>16</bbox_left>
-  <bbox_right>87</bbox_right>
-  <bbox_top>11</bbox_top>
-  <bbox_bottom>110</bbox_bottom>
+  <bbox_left>26</bbox_left>
+  <bbox_right>72</bbox_right>
+  <bbox_top>8</bbox_top>
+  <bbox_bottom>90</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>116</width>
-  <height>116</height>
+  <width>100</width>
+  <height>100</height>
   <frames>
     <frame index="0">images\spr_item_decografter_0.png</frame>
   </frames>

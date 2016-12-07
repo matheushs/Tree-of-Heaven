@@ -39,6 +39,8 @@ y = window_get_height() - sprite_height;
 
 mouse_is_hovering = false;
 move_speed = 50;
+
+visible = false;
 </string>
           </argument>
         </arguments>
@@ -95,10 +97,14 @@ for(var i = 0; i &lt; max_itens; i++){
             <kind>1</kind>
             <string>///Control Inventory Location
 
-if(mouse_is_hovering){
-    x = clamp(x + move_speed, zero_x, 0);
+if(visible){
+    if(mouse_is_hovering){
+        x = clamp(x + move_speed, zero_x, 0);
+    }else{
+        x = clamp(x - move_speed, zero_x, 0);
+    }
 }else{
-    x = clamp(x - move_speed, zero_x, 0);
+    x = zero_x;
 }
 </string>
           </argument>

@@ -81,7 +81,7 @@ depth = y * -1
           <argument>
             <kind>1</kind>
             <string>///Call teleport
-teleport(target_map);
+event_teleport(target_map);
 </string>
           </argument>
         </arguments>

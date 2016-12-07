@@ -1,6 +1,96 @@
 if(global.item_on_hand != 0){
-    if(argument0== "centrifuge"){
+    if(argument0== "analizer"){
         switch(global.item_on_hand.name){
+            case "item_vodka":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("O O O#_ O _")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_vodka", true)
+                global.item_on_hand = 0;
+                break;
+            case "item_soda":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("O _ O#O _ O")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_soda", true)
+                global.item_on_hand = 0;
+                break;
+            case "item_syroup":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("O O O#O _ _")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_syroup", true)
+                global.item_on_hand = 0;
+                break;
+            case "item_sanitizer":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("_ _ O#O _ O#O O O")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_sanitizer", true)
+                global.item_on_hand = 0;
+                break;
+            case "item_beaker_with_plants_boiled":
+            case "item_plants":
+            case "item_shredded_plants":
+            case "item_beaker_with_plants":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("O O _ O#O _ O _")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_plant", true)
+                global.item_on_hand = 0;
+                break;
+            case "item_antifotorer":
+                steve_says("It printed a paper with the following simbol:")
+                steve_says("O _ _ _ O#_ _ _ _ O#_ _ _ _ O#_ _ _ O O")
+                ai_says("You can see that result more easily in your menu, Steve.")
+                set_switch("analized_antifotorer", true)
+                global.item_on_hand = 0;
+                break;
+            default:
+                default_inventory_error();
+        }
+    }else if(argument0== "boiler"){
+        switch(global.item_on_hand.name){
+            case "item_beaker_with_plants":
+                ai_says("The boiler hums for a while, then dings.")
+                steve_says("You don't need to narrate the things I do, you know?")
+                ai_says("You are no fun.")
+                
+                remove_from_inventory(instance_find(obj_item_beaker_with_plants, 0));
+                add_to_inventory(instance_create(0, 0, obj_item_beaker_with_plants));
+                break;
+            default:
+                default_inventory_error();
+        }
+    }else if(argument0== "centrifuge"){
+        switch(global.item_on_hand.name){
+            case "item_mixture_a":
+                if(!get_switch("has_put_mix_a")){
+                    set_switch("has_put_mix_a", true);
+                    steve_says("Here, have some of the doctor's serum. It will be good for you.")
+                }else{
+                    steve_says("There is no point putting it twice.")
+                }
+                global.item_on_hand = 0;
+                break;
+            case "item_mixture_b":
+                if(!get_switch("has_put_mix_b")){
+                    set_switch("has_put_mix_b", true);
+                    steve_says("Here, have some of the Gina's mix. It will be good for you.")
+                }else{
+                    steve_says("There is no point putting it twice.")
+                }
+                global.item_on_hand = 0;
+                break;
+            case "item_mixture_b_fake":
+                if(!get_switch("has_put_mix_b_fake")){
+                    set_switch("has_put_mix_b_fake", true);
+                    steve_says("Here, have some of the Gina's mix. It will be good for you.")
+                }else{
+                    steve_says("There is no point putting it twice.")
+                }
+                global.item_on_hand = 0;
+                break;
             case "item_vodka":
                 if(!get_switch("has_put_vodka")){
                     set_switch("has_put_vodka", true);
@@ -37,6 +127,8 @@ if(global.item_on_hand != 0){
                 }
                 global.item_on_hand = 0;
                 break;
+            case "item_beaker_with_plants_boiled":
+                set_switch("has_put_boiled_plants", true);
             case "item_plants":
             case "item_shredded_plants":
             case "item_beaker_with_plants":
@@ -68,9 +160,10 @@ if(global.item_on_hand != 0){
             if(get_switch("decoded_laboratory_log")){
                 steve_says("I've already decoded this log.");
             }else{
-                steve_says("[INSERT DECODING GAME HERE]");
-                show_debug_message("src_Laboratory needs a decoding game")
-                set_switch("decoded_laboratory_log", true)
+                //steve_says("[INSERT DECODING GAME HERE]");
+                //show_debug_message("src_Laboratory needs a decoding game")
+                //set_switch("decoded_laboratory_log", true)
+                start_decogame(room, "decoded_laboratory_log");
             }
             global.item_on_hand = 0;
         }else{
@@ -127,6 +220,11 @@ switch(argument0){
         if(get_switch("has_put_plants")) num_of_ingredients++;
         if(get_switch("has_put_antifotorer")) num_of_ingredients++;
         
+        if(get_switch("has_put_boiled_plants")) num_of_ingredients++;
+        if(get_switch("has_put_mix_a")) num_of_ingredients++;
+        if(get_switch("has_put_mix_b")) num_of_ingredients++;
+        if(get_switch("has_put_mix_b_fake")) num_of_ingredients++;
+        
         if(num_of_ingredients == 0){
             steve_says("A centrifuge, useful when you need... you know, centrifuging stuff.")
         }else{
@@ -144,7 +242,7 @@ switch(argument0){
         steve_says("A boiler. It's like an oven, but when you want to be really precise.")
         break;
     case "analizer":
-        steve_says("A chemical analizer. Pass anything through here and it will tell you its chemical composition.")
+        steve_says("A chemical analyzer. Pass anything through here and it will tell you its chemical composition.")
         break;
     case "log_recorder":
         if(get_switch("decoded_laboratory_log")){

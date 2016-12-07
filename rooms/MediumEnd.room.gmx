@@ -10,14 +10,23 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>log_says("...")
+  <code>with(instance_find(Inventory, 0)){
+    instance_destroy();
+}
+
+set_switch("is_in_medium_end", true);
+set_switch("end", true)
+
+event_wait(2)
 
 log_says("Two little Soldier Boys,")
-log_says("went out to be gone,")
+log_says("Went out to be gone,")
 log_says("They flew into the nearest star,")
 log_says("And then there were none.")
 
-event_callScript(scr_game_end)</code>
+//event_callScript(scr_game_end)
+
+event_teleport(CreditsRoom)</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

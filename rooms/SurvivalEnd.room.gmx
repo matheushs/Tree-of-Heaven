@@ -10,7 +10,15 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>if(!get_switch("has_real_cure")){
+  <code>with(instance_find(Inventory, 0)){
+    instance_destroy();
+}
+
+set_switch("end", true)
+
+if(!get_switch("has_real_cure")){
+    set_switch("is_in_survival_bad_end", true)
+
     log_says("You drifted through space as your ship dove into the sun.")
     log_says("And you know it was impossible,")
     log_says("Simply because the sound could not have been transmitted through the vacuum of space,")
@@ -22,17 +30,36 @@
     if(get_switch("has_fake_cure")){
         log_says("You drank the cure as soon as you woke...")
         log_says("But it simply didn't work.")
+        log_says("Perhaps you did something wrong.")
     }
+    
+    event_wait(2)
     
     log_says("Ten little Soldier Boys,")
     log_says("Going to the escape pod free,")
     log_says("They opened it and fought the man,")
     log_says("And then there were three.")
 }else{
-    log_says("No best end yet.")
+    set_switch("is_in_survival_good_end", true)
+
+    log_says("You drifted through space as your ship, the Tree of Heaven, dove into the sun.")
+    log_says("The silence, the emptiness, the void all around you.")
+    log_says("It was... Lonely.")
+    log_says("But eventually the stasis kicked in and you slept.")
+    log_says("You kept on going, orbiting the star, year, after year, after year.")
+    log_says("Until some day, against all odds, they found you.")
+    
+    event_wait(2)
+    
+    log_says("Ten little Soldier Boys ")
+    log_says("Going to find the Tree of Heaven")
+    log_says("The survivor drank his cure")
+    log_says("And then there were eleven. ")
 }
 
-event_callScript(scr_game_end)</code>
+//event_callScript(scr_game_end)
+
+event_teleport(CreditsRoom)</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

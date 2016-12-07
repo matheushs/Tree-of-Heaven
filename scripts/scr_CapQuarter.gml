@@ -58,6 +58,8 @@ switch(argument0){
         steve_says("The D13 star. It has been emmiting some strange signals for a while, so we were sent to investigate.");
         steve_says("Last I've heard from the crew we hadn't found anything new.");
         break;
+    case "door":
+        event_teleport(Cockpit);
     default:
     break
 }

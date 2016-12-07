@@ -10,18 +10,26 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>log_says("You drifted through space as your ship dove into the sun.")
+  <code>with(instance_find(Inventory, 0)){
+    instance_destroy();
+}
+
+set_switch("is_in_bad_end", true);
+set_switch("end", true)
+
+log_says("You drifted through space as your ship dove into the sun.")
 log_says("You kept on going, orbiting it, year, after year, after year.")
 log_says("Until some day, against all odds, they found you.")
 
-log_says("...")
+event_wait(2)
 
-log_says("Ten little Soldier Boys ")
+log_says("Ten little Soldier Boys")
 log_says("Going in for the dark sun,")
 log_says("They opened the escape pod,")
 log_says("And then there was just one.")
 
-event_callScript(scr_game_end)</code>
+//event_callScript(scr_game_end)
+event_teleport(CreditsRoom)</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

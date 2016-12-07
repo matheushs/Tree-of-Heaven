@@ -1,6 +1,7 @@
 ///initialize_switches()
 with(GameState){
     switches = ds_map_create();
+    switches[? "in_menu"] = true;
     switches[? "intro"] = false;
     switches[? "current_soldier_chapter"] = 10;
     switches[? "woke_up_ai"] = false;
@@ -19,6 +20,7 @@ with(GameState){
     switches[? "decoded_crew_quarter_log"] = false;
     switches[? "got_syroup"] = false;
     switches[? "opened_medbay_door"] = false;
+    switches[? "got_spacesuit"] = false;
     switches[? "opened_lab_door"] = false;
     switches[? "got_beaker"] = false;
     switches[? "got_silver_tape"] = false;
@@ -47,6 +49,29 @@ with(GameState){
     switches[? "bad_route_tried_door"] = false;
     switches[? "bad_route_opened_door"] = false;
     switches[? "is_in_good_end_route"] = false;
+    
+    switches[? "created_doctors_serum"] = false;
+    switches[? "has_put_boiled_plants"] = false;
+    switches[? "created_ginas_mixture"] = false;
+    switches[? "created_ginas_mixture_fake"] = false;
+    switches[? "has_put_mix_a"] = false;
+    switches[? "has_put_mix_b"] = false;
+    switches[? "has_put_mix_b_fake"] = false;
+    
     switches[? "has_fake_cure"] = false;
     switches[? "has_real_cure"] = false;
+    
+    switches[? "is_in_bad_end"] = false;
+    switches[? "is_in_medium_end"] = false;
+    switches[? "is_in_survival_bad_end"] = false;
+    switches[? "is_in_survival_good_end"] = false;
+    
+    switches[? "analized_soda"] = false;
+    switches[? "analized_antifotorer"] = false;
+    switches[? "analized_plant"] = false;
+    switches[? "analized_sanitizer"] = false;
+    switches[? "analized_syroup"] = false;
+    switches[? "analized_vodka"] = false;
+    
+    switches[? "end"] = false;
 }

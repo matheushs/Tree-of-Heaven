@@ -64,7 +64,6 @@ switch(global.last_selected_option){
     ai_says("No. However, this door is the only one I have access to. The other ones have been locally locked, I cannot force them open under normal circumstances.")
     
     global.option_tree_status[6] = 2;
-    set_switch("woke_up_ai", true);
     break;
     default:
     break;

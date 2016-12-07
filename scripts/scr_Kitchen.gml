@@ -25,6 +25,20 @@ if(global.item_on_hand != 0){
             default_inventory_error();
         }
         break;
+    case "item_beaker_with_plants":
+        if(argument0 == "stove"){
+            if(get_switch("decoded_crew_quarter_log")){
+                steve_says("Just a bit of fire, and... There, boiled.")
+                remove_from_inventory(instance_find(obj_item_beaker_with_plants, 0));
+                add_to_inventory(instance_create(0, 0, obj_item_beaker_with_plants_boiled));
+            }else{
+                steve_says("I should probably use the boiler on the Laboratory. It is much more precise.")
+            }
+            
+        }else{
+            default_inventory_error();
+        }
+        break;
     default:
         default_inventory_error();
         break;
@@ -70,7 +84,8 @@ switch(argument0){
         if(get_switch("got_soda")){
             steve_says("I've already got one.");
         }else{
-            steve_says("Might aswell get a soda. Never know when I might get thirsty.");
+            steve_says("This is a soda machine.");
+            steve_says("Might aswell get one. Never know when I might get thirsty.");
             set_switch("got_soda", true);
             add_to_inventory(instance_create(0, 0, obj_item_soda));
         }
@@ -79,16 +94,13 @@ switch(argument0){
         steve_says("I don't need to wash my hands right now.");
         break;
     case "escape_pod":
-        if("is_in_good_end_route"){
-        
-            scr_start_survival_ending();
-        /*
+        if(get_switch("is_in_good_end_route")){
             options[0,0] = "Leave Dan to his death."
             options[0,1] = scr_start_survival_ending;
-            options[0,0] = "Don't choose yet."
-            options[0,1] = scr_do_nothing;*/
+            options[1,0] = "Don't choose yet."
+            options[1,1] = scr_do_nothing;
             
-            //scr_showOptions(options, 2);
+            scr_showOptions(options, 2);
         }else{
             steve_says("The escape pod.");
             steve_says("I can't leave yet. There is no way I can let anyone in here.");

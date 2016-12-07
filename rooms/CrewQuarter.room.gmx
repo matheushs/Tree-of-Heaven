@@ -59,12 +59,12 @@
   </views>
   <instances>
     <instance objName="obj_CrewQuarter" x="0" y="0" name="inst_FE84237B" locked="0" code="" scaleX="0.666666686534882" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Warp" x="143" y="55" name="inst_A939C31E" locked="0" code="target_map = Hall;" scaleX="3.75" scaleY="20" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="959" y="367" name="inst_3CA0528B" locked="0" code="name = &quot;body&quot;&#xA;" scaleX="2.75" scaleY="7.06451606750488" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="920" y="603" name="inst_DFC62B6E" locked="0" code="name = &quot;log_recorder&quot;&#xA;" scaleX="1.45000004768372" scaleY="1.06451618671417" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="624" y="397" name="inst_58C03DD3" locked="0" code="name = &quot;pillow&quot;&#xA;" scaleX="1.4099999666214" scaleY="0.680000007152557" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="726" y="244" name="inst_2F99BF86" locked="0" code="name = &quot;window&quot;" scaleX="5.55999994277954" scaleY="3.08999991416931" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="644" y="35" name="inst_39235347" locked="0" code="name = &quot;air_vent&quot;&#xA;" scaleX="4.125" scaleY="2.65000009536743" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="144" y="45" name="inst_2BDDEA89" locked="0" code="name = &quot;door&quot;&#xA;" scaleX="3.46875" scaleY="20.1599998474121" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

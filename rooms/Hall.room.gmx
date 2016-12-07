@@ -21,12 +21,6 @@
         set_switch("seen_dave_body_for_the_first_time", true);
     }
     
-    if(get_switch("put_stool")){
-        with(obj_stool){
-            visible = true;
-        }
-    }
-    
     if(get_switch("entered_medbay") and get_switch("entered_laboratory") and !get_switch("realized_gone_everywhere")){
         set_switch("realized_gone_everywhere", true);
         
@@ -84,8 +78,8 @@
     <instance objName="obj_Interactable" x="537" y="283" name="inst_A22628FD" locked="0" code="name = &quot;door_to_crew_quarter&quot;&#xA;" scaleX="2.57999992370605" scaleY="8.84375" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="993" y="340" name="inst_44E88F65" locked="0" code="name = &quot;door_to_medbay&quot;&#xA;" scaleX="0.806451618671417" scaleY="5.61290311813354" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="1067" y="270" name="inst_2530E607" locked="0" code="name = &quot;door_to_laboratory&quot;" scaleX="1.28125" scaleY="11.5900001525879" colour="4294967295" rotation="-3"/>
-    <instance objName="obj_stool" x="640" y="560" name="inst_26614964" locked="0" code="visible = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_HallHatch" x="576" y="107" name="inst_7EAF1763" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hall_stool" x="624" y="487" name="inst_0D796438" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

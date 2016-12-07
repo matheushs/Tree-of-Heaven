@@ -52,7 +52,7 @@ name = "item_soda";
             <string>/// To be called on Click With Item
 
 var item = global.item_on_hand.name;
-if(item == name){steve_says("This is a Soda")}else
+if(item == name){steve_says("This is maple syroup")}else
 switch(item){
     default: default_inventory_error()
 }

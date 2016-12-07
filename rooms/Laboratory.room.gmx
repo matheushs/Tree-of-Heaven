@@ -79,7 +79,7 @@ set_switch("entered_laboratory", true)</code>
     <instance objName="obj_Interactable" x="586" y="235" name="inst_787C24A5" locked="0" code="name = &quot;boiler&quot;" scaleX="7.25" scaleY="3.5625" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="862" y="187" name="inst_03969259" locked="0" code="name = &quot;analizer&quot;" scaleX="4.19000005722046" scaleY="10.4838705062866" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="1051" y="146" name="inst_63416BAE" locked="0" code="name = &quot;analizer&quot;&#xA;" scaleX="6.09999990463257" scaleY="13.84375" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="950" y="619" name="inst_88EA6E19" locked="0" code="name = &quot;door_to_hall&quot;" scaleX="10.289999961853" scaleY="3.13000011444092" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="1107" y="611" name="inst_88EA6E19" locked="0" code="name = &quot;door_to_hall&quot;" scaleX="5.4193549156189" scaleY="3.44000005722046" colour="4294967295" rotation="0"/>
     <instance objName="obj_lab_log" x="44" y="584" name="inst_2B71CF78" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

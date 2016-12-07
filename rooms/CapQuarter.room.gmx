@@ -62,8 +62,8 @@
   <instances>
     <instance objName="obj_CapQuarter" x="0" y="0" name="inst_1455D5C4" locked="0" code="" scaleX="0.666666686534882" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="858" y="631" name="inst_8A3CDC7F" locked="0" code="name = &quot;book&quot;&#xA;" scaleX="5.21999979019165" scaleY="2.51999998092651" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Warp" x="120" y="40" name="inst_D5481B14" locked="0" code="target_map = Cockpit;" scaleX="6.25" scaleY="13.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_Interactable" x="699" y="118" name="inst_D421C7F6" locked="0" code="name = &quot;window&quot;&#xA;" scaleX="15.5500001907349" scaleY="4.65625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="120" y="80" name="inst_7EEB0F19" locked="0" code="name = &quot;door&quot;&#xA;" scaleX="6.34375" scaleY="12.4700002670288" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

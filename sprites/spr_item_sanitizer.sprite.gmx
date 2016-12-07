@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>29</bbox_left>
-  <bbox_right>98</bbox_right>
-  <bbox_top>17</bbox_top>
-  <bbox_bottom>116</bbox_bottom>
+  <bbox_left>18</bbox_left>
+  <bbox_right>69</bbox_right>
+  <bbox_top>7</bbox_top>
+  <bbox_bottom>81</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>133</width>
-  <height>133</height>
+  <width>88</width>
+  <height>88</height>
   <frames>
     <frame index="0">images\spr_item_sanitizer_0.png</frame>
   </frames>

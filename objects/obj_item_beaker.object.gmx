@@ -60,6 +60,10 @@ switch(item){
         add_to_inventory(instance_create(0, 0, obj_item_beaker_with_plants));
         steve_says("There, now I can process these plants more easily.")
         break;
+    case "item_plants":
+        steve_says("I can't just put it in there like this.")
+        steve_says("The plants are too big, it would be better to make them smaller, first.")
+        break;
     default: default_inventory_error()
 }
 </string>

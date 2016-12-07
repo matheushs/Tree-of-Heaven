@@ -78,15 +78,16 @@ if(get_switch("got_vodka")){
   </views>
   <instances>
     <instance objName="obj_Kitchen" x="0" y="0" name="inst_37A9788B" locked="0" code="" scaleX="0.666666686534882" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
-    <instance objName="obj_knife" x="440" y="400" name="inst_2A5960D2" locked="0" code="" scaleX="3.02999997138977" scaleY="3.57999992370605" colour="4294967295" rotation="0"/>
-    <instance objName="obj_vodka" x="600" y="400" name="inst_1E81DE15" locked="0" code="" scaleX="3.48387098312378" scaleY="3.86999988555908" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stool" x="760" y="320" name="inst_25CCF77E" locked="0" code="" scaleX="3.09999990463257" scaleY="3.74193549156189" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="800" y="160" name="inst_3E4CC911" locked="0" code="name = &quot;soda_machine&quot;;&#xA;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="600" y="120" name="inst_E5542C9B" locked="0" code="name = &quot;sink&quot;;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="160" y="320" name="inst_DC930E04" locked="0" code="name = &quot;escape_pod&quot;;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="440" y="120" name="inst_3B4CCFE7" locked="0" code="name = &quot;stove&quot;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="760" y="520" name="inst_9D123CEA" locked="0" code="name = &quot;log_recorder&quot;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Interactable" x="1080" y="320" name="inst_ED860055" locked="0" code="name = &quot;door&quot;&#xA;" scaleX="4" scaleY="8.40999984741211" colour="4294967295" rotation="0"/>
+    <instance objName="obj_knife" x="529" y="496" name="inst_2A5960D2" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vodka" x="796" y="450" name="inst_1E81DE15" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stool" x="946" y="516" name="inst_25CCF77E" locked="0" code="" scaleX="0.670000016689301" scaleY="0.670000016689301" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="0" y="160" name="inst_3E4CC911" locked="0" code="name = &quot;soda_machine&quot;;" scaleX="7.74193525314331" scaleY="18.0645160675049" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="320" y="320" name="inst_E5542C9B" locked="0" code="name = &quot;sink&quot;;" scaleX="3.87096762657166" scaleY="1.29032254219055" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="840" y="120" name="inst_DC930E04" locked="0" code="name = &quot;escape_pod&quot;;" scaleX="3.71000003814697" scaleY="7.84000015258789" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="600" y="240" name="inst_3B4CCFE7" locked="0" code="name = &quot;stove&quot;" scaleX="3.87096762657166" scaleY="5.15999984741211" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="520" y="272" name="inst_9D123CEA" locked="0" code="name = &quot;log_recorder&quot;" scaleX="1.25" scaleY="1.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="1120" y="240" name="inst_ED860055" locked="0" code="name = &quot;door&quot;&#xA;" scaleX="5.05999994277954" scaleY="15.125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Interactable" x="400" y="280" name="inst_C373375F" locked="0" code="name = &quot;sink&quot;;&#xA;" scaleX="2.5" scaleY="1.19000005722046" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
