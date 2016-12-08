@@ -143,6 +143,7 @@ switch(argument0){
         break;
     case "door_to_quarter":
         event_teleport(CapQuarter);
+        break;
     case "hole":
         steve_says("There is a hole in the hull. Fortunately, the defense systems are generating a forcefield around it.")
         steve_says("It is the only reason I haven't been spaced the moment I entered here.")

@@ -196,6 +196,7 @@
       <script>scripts\scr_game_end.gml</script>
       <script>scripts\scr_do_teleport_badend.gml</script>
       <script>scripts\scr_do_teleport_midend.gml</script>
+      <script>scripts\scr_go_to_menu.gml</script>
     </scripts>
     <scripts name="Decografter Game">
       <script>scripts\start_decogame.gml</script>

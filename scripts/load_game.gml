@@ -54,6 +54,8 @@ for(var i = 0; i < inv.max_itens; i++){
     }
 }
 
+inv.visible = true;
+
 if(room_to_load > -1){
     room_goto(room_to_load);
 }else{
